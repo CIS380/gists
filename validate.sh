@@ -36,6 +36,7 @@ if [[ $RESP != $expected ]]; then
     echo "Response did not match"
     echo "expected :$expected"
     echo "actual   :$RESP"
+    echo "This only is comparing the output of stdout. If the spacing looks wrong check the whitespace after the prompt text."
     exit 1;
 fi
 disown $pid &> /dev/null && kill -9 $pid &> /dev/null
